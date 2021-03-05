@@ -10,14 +10,14 @@ public class UserRegisterationTest {
         user = new UserRegistration();
     }
 
-@Test
-    public void mobileNumber_IsTrue() {
-        boolean result = user.validateMobilNum("91 9916522077");
+  @Test
+    public void Password_IsTrue() {
+        boolean result = user.validatePassword("Deeps(*^12345");
         Assertions.assertTrue(result);
     }
     @Test
-    public void mobileNumber_IsFalse() {
-        boolean result = user.validateMobilNum("123456789055");
+    public void Password_IsFalse() {
+        boolean result = user.validatePassword("deps9");
         Assertions.assertFalse(result);
     }
 }
