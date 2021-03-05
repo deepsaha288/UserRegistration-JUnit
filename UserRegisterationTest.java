@@ -10,16 +10,16 @@ public class UserRegisterationTest {
         user = new UserRegistration();
     }
 
-  @Test
-    public void lastName_WhenTrue() {
-        boolean result = user.validateLastName("Saha");
-        Assertions.assertTrue(result);
 
+    @Test
+    public void email_IsTrue() {
+        boolean result = user.validateEmail("deepsaha@gmail.com");
+        Assertions.assertTrue(result);
     }
 
     @Test
-    public void lastName_WhenFalse() {
-        boolean result = user.validateLastName("Saha$^GG");
+    public void email_IsFalse() {
+        boolean result = user.validateEmail("deep.saha^@gmail^..com");
         Assertions.assertFalse(result);
     }
 }
