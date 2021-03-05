@@ -12,12 +12,12 @@ public class UserRegisterationTest {
 
   @Test
     public void Password_IsTrue() {
-        boolean result = user.validatePassword("Deeps(*^12345");
+        boolean result = user.validatePassword("Deepsaha");
         Assertions.assertTrue(result);
     }
     @Test
     public void Password_IsFalse() {
-        boolean result = user.validatePassword("deps9");
+        boolean result = user.validatePassword("deeps9");
         Assertions.assertFalse(result);
     }
 }
